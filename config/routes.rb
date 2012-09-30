@@ -1,10 +1,15 @@
 Paradiso::Application.routes.draw do
+  root :to => "sections#index"
+  
+  get "students/index"
+  get "sections/index"
+
+  resources :students
   resources :sections
-
-  resources :users
-
-  get "home/index"
-
+  resources :classes
+  resources :projects
+  resources :trades
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,7 +59,7 @@ Paradiso::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
