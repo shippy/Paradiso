@@ -1,6 +1,12 @@
+require 'rubygems'
+require 'mongo'
+
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+# gem 'mongo_mapper'
+gem 'mongoid', ">= 3.0.3"
+# gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -23,6 +29,7 @@ end
 gem 'jquery-rails'
 
 gem 'therubyracer'
+gem 'bootstrap-sass'
 gem 'less-rails'
 gem 'less-rails-bootstrap'
 gem 'guard'
@@ -30,10 +37,15 @@ gem 'guard'
 group :test, :development do
   gem 'turn', '< 0.8.3'
   gem 'rspec-rails'
-  gem 'capybara'
+  gem "capybara", ">= 1.1.2"
   gem 'guard-rspec'
-  gem 'growl_notify'
-  gem 'database_cleaner'
+  gem "mongoid-rspec", ">= 1.4.6"
+  gem 'email_spec'
+  gem "cucumber-rails", ">= 1.3.0"
+  # gem 'growl_notify'
+  gem "database_cleaner", ">= 0.8.0"
+  gem "launchy", ">= 2.1.2"
+  # gem "factory_girl_rails", ">= 4.0.0"
 end
 
 # To use ActiveModel has_secure_password

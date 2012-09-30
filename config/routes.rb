@@ -3,6 +3,7 @@ Paradiso::Application.routes.draw do
   
   get "students/index"
   get "sections/index"
+  get "students/new"
 
   resources :students
   resources :sections

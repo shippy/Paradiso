@@ -1,2 +1,16 @@
-<h1>Sections#index</h1>
-<p>Find me in app/views/sections/index.html.erb</p>
+<h1>All sections</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sections.each do |s| %>
+    <tr>
+      <td><%= s.teacher %></td>
+      <td><%= s.email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

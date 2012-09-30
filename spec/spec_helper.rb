@@ -36,13 +36,21 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   
-  require 'database_cleaner'
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.orm = "mongoid"
+  RSpec.configure do |config|
+       # Other things
+   
+       # Clean up the database
+       require 'database_cleaner'
+       config.before(:suite) do
+         DatabaseCleaner.strategy = :truncation
+         DatabaseCleaner.orm = "mongoid"
+       end
+   
+       config.before(:each) do
+         DatabaseCleaner.clean
+       end
+     end
+  config.before :each do
+    Mongoid.purge!
   end
-
-  config.before(:each) do
-    DatabaseCleaner.clean
-  end 
 end
