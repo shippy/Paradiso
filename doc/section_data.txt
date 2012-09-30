@@ -1,0 +1,42 @@
+DRST	001	01	(13023)	Directed Studies: Literature	Jane Levin	TTh 9.00-10.15 WLH 204
+W 11.35-12.25 WHC AUD
+DRST	001	02	(13021)	Directed Studies: Literature	Edwin Duval	TTh 2.30-3.45 WLH 003
+W 11.35-12.25 WHC AUD
+DRST	001	03	(13022)	Directed Studies: Literature	Pauline LeVen	MW 9.00-10.15 LC 209
+W 11.35-12.25 WHC AUD
+DRST	001	04	(13019)	Directed Studies: Literature	Christopher Wood	TTh 2.30-3.45 LC 104
+W 11.35-12.25 WHC AUD
+DRST	001	05	(13020)	Directed Studies: Literature	Ruth Yeazell	MW 2.30-3.45 LC 208
+W 11.35-12.25 WHC AUD
+DRST	001	06	(13017)	Directed Studies: Literature	Joshua Billings	MW 2.30-3.45 PH 312
+W 11.35-12.25 WHC AUD
+DRST	001	07	(13018)	Directed Studies: Literature	Peter Hawkins	TTh 2.30-3.45 WLH 007
+W 11.35-12.25 WHC AUD
+DRST	003	01	(13029)	Directed Studies: Philosophy	Barbara Sattler	TTh 11.35-12.50 WLH 112
+F 11.35-12.25 WHC AUD
+DRST	003	02	(13026)	Directed Studies: Philosophy	Anthony Kronman	TTh 1.00-2.15 HGS 302
+F 11.35-12.25 WHC AUD
+DRST	003	04	(13027)	Directed Studies: Philosophy	Epifanio Elizondo	TTh 11.35-12.50 WLH 202
+F 11.35-12.25 WHC AUD
+DRST	003	05	(13028)	Directed Studies: Philosophy	Michael Della Rocca	TTh 11.35-12.50 WLH 007
+F 11.35-12.25 WHC AUD
+DRST	003	06	(13024)	Directed Studies: Philosophy	Bruno Whittle	TTh 11.35-12.50 WLH 209
+F 11.35-12.25 WHC AUD
+DRST	003	07	(13025)	Directed Studies: Philosophy	Raphael Woolf	TTh 11.35-12.50 CO493 208
+F 11.35-12.25 WHC AUD
+DRST	003	08	(13820)	Directed Studies: Philosophy	David Goldman	TTh 11.35-12.50 HGS 301
+F 11.35-12.25 WHC AUD
+DRST	005	01	(13030)	DirectedStud:Hist&PolitThought	Kathryn Slanski	M 11.35-12.25 WHC AUD
+MW 2.30-3.45 WLH 001
+DRST	005	02	(13033)	DirectedStud:Hist&PolitThought	Stuart Semmel	M 11.35-12.25 WHC AUD
+TTh 2.30-3.45 HGS 302
+DRST	005	03	(13034)	DirectedStud:Hist&PolitThought	Steven Smith	M 11.35-12.25 WHC AUD
+TTh 9.00-10.15 WLH 112
+DRST	005	04	(13031)	DirectedStud:Hist&PolitThought	Camille Lizarríbar	M 11.35-12.25 WHC AUD
+TTh 2.30-3.45 HGS 218
+DRST	005	05	(13032)	DirectedStud:Hist&PolitThought	Dale Martin	M 11.35-12.25 WHC AUD
+MW 2.30-3.45 LC 103
+DRST	005	06	(13035)	DirectedStud:Hist&PolitThought	Loubna El Amine	M 11.35-12.25 WHC AUD
+MW 9.00-10.15 LC 318
+DRST	005	07	(13036)	DirectedStud:Hist&PolitThought	Danilo Petranovich	M 11.35-12.25 WHC AUD
+MW 1.00-2.15 HGS 217B

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  netid: MyString
+  id: 1
+  current: MyString
+  desired: MyString
+  student: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  netid: MyString
+  id: 1
+  current: MyString
+  desired: MyString
+  student: false

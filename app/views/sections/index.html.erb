@@ -1,0 +1,31 @@
+<h1>Listing sections</h1>
+
+<table>
+  <tr>
+    <th>Teacher</th>
+    <th>Days</th>
+    <th>Time</th>
+    <th>Id</th>
+    <th>Count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sections.each do |section| %>
+  <tr>
+    <td><%= section.teacher %></td>
+    <td><%= section.days %></td>
+    <td><%= section.time %></td>
+    <td><%= section.id %></td>
+    <td><%= section.count %></td>
+    <td><%= link_to 'Show', section %></td>
+    <td><%= link_to 'Edit', edit_section_path(section) %></td>
+    <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Section', new_section_path %>
