@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Netid:</b>
+  <%= @student.netid %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @student.email %>
+</p>
+
+<p>
+  <b>Sections:</b>
+  <%= @student.sections %>
+</p>
+
+<p>
+  <b>Exceptions:</b>
+  <%#= @student.exceptions %>
+</p>
+
+<p>
+  <b>Desires:</b>
+  <%#= @student.desires %>
+</p>
+
+<p>
+  <b>Trades:</b>
+  <%#= @student.trades %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
