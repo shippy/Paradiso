@@ -28,6 +28,7 @@
     <% @sections.each do |section| %>
       <%= label_tag section.name %>
       <%= check_box_tag "request[targets][#{section.id}]"  %>
+      <br>
     <% end %>
     <a class='top button get_started'><i class='fa fa-chevron-up fa-2x'></i></a>
     <a class='next button finalize'>Next</a>
