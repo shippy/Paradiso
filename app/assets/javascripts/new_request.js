@@ -20,5 +20,5 @@ $(document).ready(function() {
 });
 
 var scroll = function(selector) {
-  $.scrollTo(selector,800);
+  $.scrollTo(selector,500);
 }

@@ -64,6 +64,7 @@ $yaleGreen: #006C49;
 body {
   margin: 0;
   font-family: 'latoregular';
+  background-color: lighten(#5182B4,20%);
 }
 
 .heading {
@@ -76,15 +77,14 @@ body {
 #start {
   display: inline-block;
   margin: auto;
-  background-color: $yaleBlue;
-  font-size: 4em;
+  background-color: $yaleGreen;
+  font-size: 3em;
   margin: 1em;
   width: 10em;
-  border-radius: .5em;
 }
 
 #start:hover {
-  background-color: darken($yaleBlue, 10%);
+  background-color: darken($yaleGreen, 10%);
 }
 
 #submit {
@@ -102,4 +102,16 @@ select {
   border: 0;
   padding: 1em;
   font-size: 1.5em;
+}
+
+p.instr {
+  width: 80%;
+  margin: auto;
+  color: darken($yaleBlue,10%);
+  font-size: 1.2em;
+}
+
+label {
+  font-size: 1.5em;
+  color: darken($yaleBlue,10%);
 }

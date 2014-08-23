@@ -2,7 +2,7 @@
   <p class='heading'>
     Welcome
   </p>
-  <p>
+  <p class='instr'>Welcome to Paradiso! Unhappy with your assigned section? Experiencing scheduling conflicts? We can help. Enter the section you are currently in, and then select any sections you would be willing to switch into. We will examine the possibilities, and if a move is possible we will make the trade! All trades are final, so make sure to only choose sections you would be 100% willing to switch into. You will receive an email with your new section within a day or two if we are able to match you.
   </p>
   <a id='start' class='get_started button'>Get Started</a>
 </div>
@@ -35,7 +35,7 @@
 
   <div id='done' class='full'>
     <p class='heading'>
-    done
+     Confirm
     </p>
     <%= text_field_tag "request[email]" unless Student.find_by_netid(session[:cas_user]) %>
     <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
