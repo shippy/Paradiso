@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 gem 'pry-byebug', group: :development
 
 gem 'jquery-scrollto-rails'
+gem 'rgl'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
