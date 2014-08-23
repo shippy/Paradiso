@@ -1,8 +1,8 @@
 class RequestsController < ApplicationController
 
   def index
-    @pending_requests = Request.where('active = true')
-    @fulfilled_requests = Request.where('active = false')
+    @pending_requests = Request.where(active: true)
+    @fulfilled_requests = Request.where(active: false)
   end
 
   def new
