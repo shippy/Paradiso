@@ -5,4 +5,8 @@ class Section < ActiveRecord::Base
 
   #validates :professor, :time_slot, :place, :course, presence: true
   # validates_email_format_of :professor, :message => 'is invalid.'
+  #
+  def name
+    "#{self.course.name} #{time_slot} (#{professor})"
+  end
 end
