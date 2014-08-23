@@ -85,3 +85,14 @@ body {
 #start:hover {
   background-color: darken($yaleBlue, 10%);
 }
+
+#submit {
+  border: 0;
+  background-color: green;
+  font-size: 3em;
+  @include animate(.3s);
+}
+
+#submit:hover {
+  background-color: darken(green, 10%);
+}

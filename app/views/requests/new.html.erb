@@ -36,7 +36,7 @@
     done
     </p>
     <%= text_field_tag "request[email]" unless Student.find_by_netid(session[:cas_user]) %>
-    <%= submit_tag "Finished!", id: 'submit' %>
+    <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
     <a class='top button choose_target'>Back</a>
   </div>
 
