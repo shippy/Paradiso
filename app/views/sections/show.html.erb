@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @section.professor %>
+</p>
+
+<p>
+  <strong>Time slot:</strong>
+  <%= @section.time_slot %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @section.place %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
