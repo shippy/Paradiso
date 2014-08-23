@@ -8,7 +8,9 @@
 
 course = Course.create(name: "Introduction to Github", email: "testcourse@example.com")
 6.times do |i|
-  Section.create(professor: "professor#{i}@example.com", time_slot: "time_slot##{i}", place: "test place #{i}", course: course)
+  Section.create(professor: ["Robert Reed", "Marvin Chun", "Robert Feynman", "Linus Torvalds", "John Travolta"].sample,
+                 time_slot: ["TTh 1:00-2:15", "MWF 10:25-11:15", "WF 1:00-3:00", "TTh 9:00-10:15", "MW 9:00-10:15", "MWF 2:00-2:50"].sample,
+                 place: ["STOECK 104", "WLH 211", "LOM 222", "WLH 201", "KKK 666"].sample, course: course)
 end
 30.times do |i|
   student = Student.create(name: "Test Student ##{i}", netid: "te#{i}", email: "test#{i}@example.com")
