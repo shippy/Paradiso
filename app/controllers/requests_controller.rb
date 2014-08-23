@@ -1,5 +1,10 @@
 class RequestsController < ApplicationController
 
+  def index
+    @pending_requests = Request.where('active = true')
+    @fulfilled_requests = Request.where('active = false')
+  end
+
   def new
     @request = Request.new
     @sections = Section.all
