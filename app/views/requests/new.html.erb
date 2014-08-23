@@ -17,7 +17,7 @@
     <%= select_tag "request[original_section]",
       options_for_select(@sections.map{ |section| [section.name, section.id] }) %>
   </label>
-    <a class='top button welcome'>Back</a>
+    <a class='top button welcome'><i class='fa fa-chevron-up fa-2x'></i></a>
     <a class='next button choose_target'>Next</a>
   </div>
 
@@ -29,7 +29,7 @@
       <%= label_tag section.name %>
       <%= check_box_tag "request[targets][#{section.id}]"  %>
     <% end %>
-    <a class='top button get_started'>Back</a>
+    <a class='top button get_started'><i class='fa fa-chevron-up fa-2x'></i></a>
     <a class='next button finalize'>Next</a>
   </div>
 
@@ -40,7 +40,7 @@
      <%= text_field_tag("request[email]") if Student.find_by_netid(session[:cas_user]).nil? %>
     <br />
     <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
-    <a class='top button choose_target'>Back</a>
+    <a class='top button choose_target'><i class='fa fa-chevron-up fa-2x'></i></a>
   </div>
 
 <% end %>
