@@ -13,7 +13,7 @@ course = Course.create(name: "Introduction to Github", email: "testcourse@exampl
                  place: ["STOECK 104", "WLH 211", "LOM 222", "WLH 201", "KKK 666"].sample, course: course)
 end
 30.times do |i|
-  student = Student.create(name: "Test Student ##{i}", netid: "te#{i}", email: "test#{i}@example.com")
+  student = Student.create(name: ["Qinyang Chen", "Carsten Peterson", "Hannia Zia", "Sarah Hamilton", "Sylvan Zheng", "Simon Podhajasky"].sample, netid: "te#{i}", email: "test#{i}@example.com")
   Attendance.create(student: student, section: Section.all.sample)
 end
 
