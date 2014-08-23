@@ -6,17 +6,24 @@ class RequestsController < ApplicationController
   end
 
   def create
-   # @request = Request.new(request_params)
+    targets = params[:request][:targets]
+    email = params[:request][:email]
+    original = params[:request][:original_section]
 
-    respond_to do |format|
-      if @request.save
-        format.html { redirect_to @request, notice: 'request was successfully created.' }
-        format.json { render :show, status: :created, location: @request }
-      else
-        format.html { render :new }
-        format.json { render json: @request.errors, status: :unprocessable_entity }
-      end
+    if Student.find_by_netid(session[:cas_user])
+      # student exists already
+      student = Student.find_by_netid(session[:cas_user])
+    else
+      student = Student.new(netid: session[:cas_user], email: email)
+      student.save
     end
+
+    targets.each do |t, val|
+      req = Request.new(original_section_id: original, target_section_id: t, student_id: student.id, active: true)
+      req.save
+    end
+    render :done
+
   end
 
   private
