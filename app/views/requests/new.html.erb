@@ -4,7 +4,7 @@
   </p>
   <p class='instr'>Welcome to Paradiso! Unhappy with your assigned section? Experiencing scheduling conflicts? We can help. Enter the section you are currently in, and then select any sections you would be willing to switch into. We will examine the possibilities, and if a move is possible we will make the trade! All trades are final, so make sure to only choose sections you would be 100% willing to switch into. You will receive an email with your new section within a day or two if we are able to match you.
   </p>
-  <a id='start' class='get_started button'>Get Started</a>
+  <a id='start' class='get_started bigbutton'>Get Started</a>
 </div>
 
 <%= form_tag requests_path, method: :post do %>
@@ -39,7 +39,7 @@
      </p>
      <%= text_field_tag("request[email]") if Student.find_by_netid(session[:cas_user]).nil? %>
     <br />
-    <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
+    <%= submit_tag "Finished!", class: 'bigbutton' %>
     <a class='top button choose_target'><i class='fa fa-chevron-up fa-2x'></i></a>
   </div>
 

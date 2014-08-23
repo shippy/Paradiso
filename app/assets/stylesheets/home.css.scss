@@ -81,18 +81,12 @@ body {
 #start {
   display: inline-block;
   margin: auto;
-  background-color: $yaleGreen;
-  font-size: 3em;
   margin: 1em;
   width: 10em;
-  font-family: 'ostrich_sansmedium';
 }
 
-#start:hover {
-  background-color: darken($yaleGreen, 10%);
-}
-
-#submit {
+.bigbutton {
+  @extend .button;
   border: 0;
   background-color: $yaleGreen;
   font-size: 3em;
@@ -100,7 +94,7 @@ body {
   font-family: 'ostrich_sansmedium';
 }
 
-#submit:hover {
+.bigbutton:hover {
   background-color: darken($yaleGreen, 10%);
 }
 
