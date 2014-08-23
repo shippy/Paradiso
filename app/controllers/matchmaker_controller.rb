@@ -1,5 +1,5 @@
 class MatchmakerController < ApplicationController
-	def swap
+	def self.swap
 		requests = Request.where(active: true)
 		suggested = findBestSolution(requests) #returns list of request IDs
 
