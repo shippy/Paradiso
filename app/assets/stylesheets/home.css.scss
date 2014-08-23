@@ -78,12 +78,6 @@ body {
   font-family: 'ostrich_sansmedium';
 }
 
-#start {
-  display: inline-block;
-  margin: auto;
-  margin: 1em;
-  width: 10em;
-}
 
 .bigbutton {
   @extend .button;
@@ -92,7 +86,11 @@ body {
   font-size: 3em;
   @include animate(.3s);
   font-family: 'ostrich_sansmedium';
+  display: inline-block;
+  margin: auto;
+  margin: 1em;
 }
+
 
 .bigbutton:hover {
   background-color: darken($yaleGreen, 10%);
@@ -123,4 +121,8 @@ label {
   font-size: 1.4em;
   margin-bottom: 1em;
   padding: .5em;
+}
+
+.center {
+  text-align: center;
 }

@@ -1,4 +1,22 @@
 <p class='heading'>
+All Requests
+</p>
+<div class='center'>
+  <%= link_to 'Swap!',
+    swap_path, class: 'bigbutton' %>
+</div>
+
+<p class = 'heading'>
+  Fulfilled Requests
+  </p>
+
+  <% @fulfilled_requests.each do |r| %>
+    <p>
+    <%= r.student.name %> switched from <%= r.original_section.name %> to <%= r.target_section.name %>
+    </p>
+ <% end %>
+
+  <p class='heading'>
   Pending Requests
   </p>
 
@@ -9,12 +27,3 @@
 
   <% end %>
 
-  <p class = 'heading'>
-  Fulfilled Requests
-  </p>
-
-  <% @fulfilled_requests.each do |r| %>
-    <p>
-    <%= r.student.name %> switched from <%= r.original_section.name %> to <%= r.target_section.name %>
-    </p>
-  <% end %>
