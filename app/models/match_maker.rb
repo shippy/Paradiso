@@ -1,7 +1,7 @@
 require 'rgl/adjacency'
 require 'pry'
 module MatchMaker
-	def findAllSolutions(requests)
+	def self.findAllSolutions(requests)
 		# create graph (edges) based on requests (Request objects)
 		graph = RGL::DirectedAdjacencyGraph.new()
 
@@ -77,8 +77,8 @@ module MatchMaker
 		return [all_cycles, requestHash]
 	end
 
-	def findBestSolution (requests)
-		all_cycles, requestHash = findAllSolutions(requests)
+	def self.findBestSolution (requests)
+		all_cycles, requestHash = self.findAllSolutions(requests)
 
 		length_solutions = []
 
@@ -94,7 +94,7 @@ module MatchMaker
 			length_solutions.push(to_append) unless to_append.empty?
 		end
 
-		
+
 
 		length_index = []
 
@@ -181,7 +181,7 @@ module MatchMaker
 
 	end
 
-	def validCycles (cycle1, cycle2, studentHash, courseHash)
+	def self.validCycles (cycle1, cycle2, studentHash, courseHash)
 		# all_edges is the list of all student IDs from all edges in cycle1, cycle2
 		all_edges = []
 		i = 0
