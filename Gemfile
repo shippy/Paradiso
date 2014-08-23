@@ -23,10 +23,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-gem 'pry-byebug', group: :development
-
 gem 'jquery-scrollto-rails'
 
 # Use ActiveModel has_secure_password
@@ -41,7 +37,13 @@ gem 'jquery-scrollto-rails'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'pry', group: :development
+group :development, :test do
+  gem 'pry'
+  gem 'ffaker'
+  gem 'pry-byebug'
+  gem 'spring'
+end
+
 gem 'validates_email_format_of'
 
 gem 'rubycas-client', :git => "https://github.com/rubycas/rubycas-client"
