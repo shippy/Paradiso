@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'pry-byebug', group: :development
 
 gem 'jquery-scrollto-rails'
+gem 'font-awesome-rails'
 gem 'rgl'
 
 # Use ActiveModel has_secure_password
