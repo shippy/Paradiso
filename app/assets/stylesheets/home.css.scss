@@ -97,6 +97,7 @@ body {
   background-color: $yaleGreen;
   font-size: 3em;
   @include animate(.3s);
+  font-family: 'ostrich_sansmedium';
 }
 
 #submit:hover {
