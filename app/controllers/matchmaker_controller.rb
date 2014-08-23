@@ -1,7 +1,7 @@
 class MatchmakerController < ApplicationController
 	def self.swap
 		requests = Request.where(active: true)
-		suggested = [1, 2, 3, 4, 5] #findBestSolution(requests) #returns list of request IDs
+		suggested = findBestSolution(requests) #returns list of request IDs
 
 		suggested.each do |request_id|
 			request = Request.find(request_id)
@@ -13,6 +13,7 @@ class MatchmakerController < ApplicationController
 			record.update_attributes(section: request.target_section)
 			# TODO: transaction each closed graph / the entire solution
 			request.active = false
+
 			request.save
 		end
 	end
