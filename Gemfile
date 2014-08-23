@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rgl'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -28,6 +29,7 @@ gem 'spring',        group: :development
 gem 'pry-byebug', group: :development
 
 gem 'jquery-scrollto-rails'
+gem 'font-awesome-rails'
 gem 'rgl'
 
 # Use ActiveModel has_secure_password

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :students
 
-  resources :requests, only: [:new, :create]
+  resources :requests, only: [:new, :create, :index]
 
   root 'requests#new'
 

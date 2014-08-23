@@ -55,6 +55,7 @@ $yaleGreen: #006C49;
   bottom: 2em;
   right: 2em;
   background-color: $yaleGreen;
+  font-family: 'ostrich_sansmedium';
 }
 
 .next:hover{
@@ -64,37 +65,36 @@ $yaleGreen: #006C49;
 body {
   margin: 0;
   font-family: 'latoregular';
-  background-color: lighten(#5182B4,20%);
+  background-color: lighten(#5182B4,30%);
 }
 
 .heading {
   background-color: $yaleBlue;
   color: white;
   padding: .5em;
-  font-size: 3em;
+  margin-top: 0;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: 'ostrich_sansmedium';
 }
 
 #start {
   display: inline-block;
   margin: auto;
-  background-color: $yaleGreen;
-  font-size: 3em;
   margin: 1em;
   width: 10em;
 }
 
-#start:hover {
-  background-color: darken($yaleGreen, 10%);
-}
-
-#submit {
+.bigbutton {
+  @extend .button;
   border: 0;
   background-color: $yaleGreen;
   font-size: 3em;
   @include animate(.3s);
+  font-family: 'ostrich_sansmedium';
 }
 
-#submit:hover {
+.bigbutton:hover {
   background-color: darken($yaleGreen, 10%);
 }
 

@@ -1,0 +1,20 @@
+<p class='heading'>
+  Pending Requests
+  </p>
+
+  <% @pending_requests.each do |r| %>
+    <p>
+    <%= r.student.name %> wants to switch from <%= r.original_section.name %> to <%= r.target_section.name %>
+    </p>
+
+  <% end %>
+
+  <p class = 'heading'>
+  Fulfilled Requests
+  </p>
+
+  <% @fulfilled_requests.each do |r| %>
+    <p>
+    <%= r.student.name %> switched from <%= r.original_section.name %> to <%= r.target_section.name %>
+    </p>
+  <% end %>
