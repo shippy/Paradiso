@@ -13,8 +13,10 @@
     <p class='heading'>
       Choose your section
     </p>
+    <label class='select'>
     <%= select_tag "request[original_section]",
       options_for_select(@sections.map{ |section| [section.name, section.id] }) %>
+  </label>
     <a class='top button welcome'>Back</a>
     <a class='next button choose_target'>Next</a>
   </div>

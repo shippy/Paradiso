@@ -57,7 +57,7 @@ $yaleGreen: #006C49;
   background-color: $yaleGreen;
 }
 
-#next:hover{
+.next:hover{
   background-color: darken($yaleGreen,10%);
 }
 
@@ -96,4 +96,10 @@ body {
 
 #submit:hover {
   background-color: darken($yaleGreen, 10%);
+}
+
+select {
+  border: 0;
+  padding: 1em;
+  font-size: 1.5em;
 }
