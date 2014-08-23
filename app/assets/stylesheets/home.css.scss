@@ -51,6 +51,7 @@ $yaleGreen: #006C49;
 
 .next {
   position:absolute;
+  font-size: 1.5em;
   bottom: 2em;
   right: 2em;
   background-color: $yaleGreen;
@@ -88,11 +89,11 @@ body {
 
 #submit {
   border: 0;
-  background-color: green;
+  background-color: $yaleGreen;
   font-size: 3em;
   @include animate(.3s);
 }
 
 #submit:hover {
-  background-color: darken(green, 10%);
+  background-color: darken($yaleGreen, 10%);
 }
