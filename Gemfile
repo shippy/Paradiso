@@ -43,3 +43,5 @@ gem 'jquery-scrollto-rails'
 
 gem 'pry', group: :development
 gem 'validates_email_format_of'
+
+gem 'rubycas-client', :git => "https://github.com/rubycas/rubycas-client"
