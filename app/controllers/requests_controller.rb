@@ -23,7 +23,6 @@ class RequestsController < ApplicationController
       req.save
     end
     render :done
-
   end
 
   private

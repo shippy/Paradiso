@@ -150,8 +150,8 @@ DEPENDENCIES
   pry
   pry-byebug
   rails (= 4.1.5)
-  rubycas-client!
   rgl
+  rubycas-client!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
