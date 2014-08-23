@@ -2,10 +2,11 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
+    @sections = Section.all
   end
 
   def create
-    @request = Request.new(request_params)
+   # @request = Request.new(request_params)
 
     respond_to do |format|
       if @request.save

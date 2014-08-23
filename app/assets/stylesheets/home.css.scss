@@ -25,18 +25,10 @@ $yaleGreen: #006C49;
   height: 100vh;
   text-align: center;
   overflow: hidden;
-}
-
-#welcome {
-  //background-color: red;
-}
-
-#current {
-  //background-color: blue;
+  position: relative;
 }
 
 .button {
-  position: fixed;
   @include animate(.3s);
   padding: 1em;
   color: white;
@@ -46,17 +38,19 @@ $yaleGreen: #006C49;
   cursor: pointer;
 }
 
-#top {
+.top {
+  position: absolute;
   top: 2em;
   left: 2em;
   background-color: rgba(0,0,0,0.8);
 }
 
-#top:hover {
+.top:hover {
   background-color: rgba(0,0,0,0.9);
 }
 
-#next {
+.next {
+  position:absolute;
   bottom: 2em;
   right: 2em;
   background-color: $yaleGreen;
@@ -76,4 +70,18 @@ body {
   color: white;
   padding: .5em;
   font-size: 3em;
+}
+
+#start {
+  display: inline-block;
+  margin: auto;
+  background-color: $yaleBlue;
+  font-size: 4em;
+  margin: 1em;
+  width: 10em;
+  border-radius: .5em;
+}
+
+#start:hover {
+  background-color: darken($yaleBlue, 10%);
 }

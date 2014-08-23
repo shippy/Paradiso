@@ -1,28 +1,42 @@
-<div id='top' class='button'>
-  Top
-</div>
-
-<div id='next' class='button' data-url="#otherdiv">
-  Next
-</div>
-
 <div id='welcome' class='full'>
   <p class='heading'>
     Welcome
   </p>
   <p>
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-</p>
-</div>
-
-<div id='otherdiv' class='full'>
-  <p class='heading'>
-    otherdiv
   </p>
+  <a id='start' class='get_started button'>Get Started</a>
 </div>
 
-<div id='thirddiv' class='full'>
-  <p class='heading'>
-    thirddiv
+<%= form_tag requests_path, method: :post do %>
+
+  <div id='choose_section' class='full'>
+    <p class='heading'>
+      Choose your section
     </p>
+    <%= select_tag "request[original_section]",
+      options_for_select(@sections.map{ |section| ["Section #{section.id}", section.id] }) %>
+    <a class='top button welcome'>Back</a>
+    <a class='next button choose_target'>Next</a>
   </div>
+
+  <div id='target_section' class='full'>
+    <p class='heading'>
+      Where do you want to go?
+    </p>
+    <% @sections.each do |section| %>
+      <%= check_box_tag "request[targets][#{section.id}]" %>
+    <% end %>
+    <a class='top button get_started'>Back</a>
+    <a class='next button finalize'>Next</a>
+  </div>
+
+  <div id='done' class='full'>
+    <p class='heading'>
+    done
+    </p>
+    <%= text_field_tag "request[email]" %>
+    <%= submit_tag %>
+    <a class='top button choose_target'>Back</a>
+  </div>
+
+<% end %>
