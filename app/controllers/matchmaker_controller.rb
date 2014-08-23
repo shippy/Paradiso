@@ -1,7 +1,8 @@
 class MatchmakerController < ApplicationController
-	def self.swap
+	include MatchMaker
+	def swap
 		requests = Request.where(active: true)
-		suggested = findBestSolution(requests) #returns list of request IDs
+		suggested = MatchMaker::findBestSolution(requests) #returns list of request IDs
 
 		suggested.each do |request_id|
 			request = Request.find(request_id)
@@ -16,5 +17,7 @@ class MatchmakerController < ApplicationController
 
 			request.save
 		end
+		redirect_to 'requests#index'
 	end
+
 end

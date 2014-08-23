@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'swap' => "matchmaker#swap", as: :matchmaker_url
+
   resources :courses
 
   resources :sections
