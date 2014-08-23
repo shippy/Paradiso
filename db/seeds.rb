@@ -10,12 +10,12 @@ course = Course.create(name: "Introduction to Github", email: "testcourse@exampl
 6.times do |i|
   Section.create(professor: "professor#{i}@example.com", time_slot: "time_slot##{i}", place: "test place #{i}", course: course)
 end
-15.times do |i|
+30.times do |i|
   student = Student.create(name: "Test Student ##{i}", netid: "te#{i}", email: "test#{i}@example.com")
   Attendance.create(student: student, section: Section.all.sample)
 end
 
-14.times do |i|
+20.times do |i|
   s = Student.all.sample
   sect = s.sections.sample
   target = Section.where.not(id: sect.id).sample
