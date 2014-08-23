@@ -2,7 +2,7 @@
   <p class='heading'>
     Welcome
   </p>
-  <p>
+  <p class='instr'>Welcome to Paradiso! Unhappy with your assigned section? Experiencing scheduling conflicts? We can help. Enter the section you are currently in, and then select any sections you would be willing to switch into. We will examine the possibilities, and if a move is possible we will make the trade! All trades are final, so make sure to only choose sections you would be 100% willing to switch into. You will receive an email with your new section within a day or two if we are able to match you.
   </p>
   <a id='start' class='get_started button'>Get Started</a>
 </div>
@@ -13,8 +13,10 @@
     <p class='heading'>
       Choose your section
     </p>
+    <label class='select'>
     <%= select_tag "request[original_section]",
-      options_for_select(@sections.map{ |section| ["Section #{section.id}", section.id] }) %>
+      options_for_select(@sections.map{ |section| [section.name, section.id] }) %>
+  </label>
     <a class='top button welcome'>Back</a>
     <a class='next button choose_target'>Next</a>
   </div>
@@ -24,7 +26,8 @@
       Where do you want to go?
     </p>
     <% @sections.each do |section| %>
-      <%= check_box_tag "request[targets][#{section.id}]" %>
+      <%= label_tag section.name %>
+      <%= check_box_tag "request[targets][#{section.id}]"  %>
     <% end %>
     <a class='top button get_started'>Back</a>
     <a class='next button finalize'>Next</a>
@@ -32,10 +35,11 @@
 
   <div id='done' class='full'>
     <p class='heading'>
-    done
-    </p>
-    <%= text_field_tag "request[email]" %>
-    <%= submit_tag %>
+     Confirm
+     </p>
+     <%= text_field_tag("request[email]") if Student.find_by_netid(session[:cas_user]).nil? %>
+    <br />
+    <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
     <a class='top button choose_target'>Back</a>
   </div>
 

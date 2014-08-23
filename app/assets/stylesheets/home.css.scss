@@ -51,18 +51,20 @@ $yaleGreen: #006C49;
 
 .next {
   position:absolute;
+  font-size: 1.5em;
   bottom: 2em;
   right: 2em;
   background-color: $yaleGreen;
 }
 
-#next:hover{
+.next:hover{
   background-color: darken($yaleGreen,10%);
 }
 
 body {
   margin: 0;
   font-family: 'latoregular';
+  background-color: lighten(#5182B4,20%);
 }
 
 .heading {
@@ -75,13 +77,50 @@ body {
 #start {
   display: inline-block;
   margin: auto;
-  background-color: $yaleBlue;
-  font-size: 4em;
+  background-color: $yaleGreen;
+  font-size: 3em;
   margin: 1em;
   width: 10em;
-  border-radius: .5em;
 }
 
 #start:hover {
-  background-color: darken($yaleBlue, 10%);
+  background-color: darken($yaleGreen, 10%);
+}
+
+#submit {
+  border: 0;
+  background-color: $yaleGreen;
+  font-size: 3em;
+  @include animate(.3s);
+}
+
+#submit:hover {
+  background-color: darken($yaleGreen, 10%);
+}
+
+select {
+  border: 0;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+p.instr {
+  width: 80%;
+  margin: auto;
+  color: darken($yaleBlue,10%);
+  font-size: 1.2em;
+}
+
+label {
+  font-size: 1.5em;
+  color: darken($yaleBlue,10%);
+}
+
+#request_email {
+  display: inline-block;
+  margin: auto;
+  border: 0;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  padding: .5em;
 }
