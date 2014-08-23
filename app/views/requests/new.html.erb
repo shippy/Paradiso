@@ -1,0 +1,42 @@
+<div id='welcome' class='full'>
+  <p class='heading'>
+    Welcome
+  </p>
+  <p>
+  </p>
+  <a id='start' class='get_started button'>Get Started</a>
+</div>
+
+<%= form_tag requests_path, method: :post do %>
+
+  <div id='choose_section' class='full'>
+    <p class='heading'>
+      Choose your section
+    </p>
+    <%= select_tag "request[original_section]",
+      options_for_select(@sections.map{ |section| ["Section #{section.id}", section.id] }) %>
+    <a class='top button welcome'>Back</a>
+    <a class='next button choose_target'>Next</a>
+  </div>
+
+  <div id='target_section' class='full'>
+    <p class='heading'>
+      Where do you want to go?
+    </p>
+    <% @sections.each do |section| %>
+      <%= check_box_tag "request[targets][#{section.id}]" %>
+    <% end %>
+    <a class='top button get_started'>Back</a>
+    <a class='next button finalize'>Next</a>
+  </div>
+
+  <div id='done' class='full'>
+    <p class='heading'>
+    done
+    </p>
+    <%= text_field_tag "request[email]" %>
+    <%= submit_tag %>
+    <a class='top button choose_target'>Back</a>
+  </div>
+
+<% end %>
