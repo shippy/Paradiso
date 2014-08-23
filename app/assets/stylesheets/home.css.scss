@@ -115,3 +115,12 @@ label {
   font-size: 1.5em;
   color: darken($yaleBlue,10%);
 }
+
+#request_email {
+  display: inline-block;
+  margin: auto;
+  border: 0;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  padding: .5em;
+}

@@ -36,8 +36,9 @@
   <div id='done' class='full'>
     <p class='heading'>
      Confirm
-    </p>
-    <%= text_field_tag "request[email]" unless Student.find_by_netid(session[:cas_user]) %>
+     </p>
+     <%= text_field_tag("request[email]") if Student.find_by_netid(session[:cas_user]).nil? %>
+    <br />
     <%= submit_tag "Finished!", id: 'submit', class: 'button' %>
     <a class='top button choose_target'>Back</a>
   </div>
